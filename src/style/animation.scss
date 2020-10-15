@@ -1,0 +1,44 @@
+@keyframes fade {
+  from {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: .6;
+  }
+  to {
+    opacity: 1.0;
+  }
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: .6;
+  }
+  to {
+    opacity: 1.0;
+  }
+}
+
+// 选择180度
+@keyframes rotate-opposite {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@-webkit-keyframes rotate-opposite {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(180deg);
+  }
+}
