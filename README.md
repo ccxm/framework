@@ -6,9 +6,9 @@
     ├── src                        // 源代码
     │   ├── api                    // 请求文件夹
     │   │   ├── user                // 具体某一类请求的文件夹
-    │   │  │  └── index.js         // 请求函数
-    │   │  │  └── params.js        // 请求参数
-    │   │  └── index.js            // 汇总请求，请求的入口文件
+    │   │   │  └── index.js         // 请求函数
+    │   │   │  └── params.js        // 请求参数
+    │   │   └── index.js            // 汇总请求，请求的入口文件
     │   ├── assets                 // 主题 字体等静态资源
     │   ├── components             // 全局公用组件
     │   ├── config                 // 全局配置文件
@@ -19,9 +19,9 @@
     │   │   └── index.js           // filters的入口文件，在此注册
     │   ├── mixins                 // 混入文件夹
     │   ├── pages                  // 页面文件
-    │   │   └── hello              // 具体某一类请求文件夹
-    │   │       └── components     // 请求函数
-    │   │       └── index.vue      // 请求参数
+    │   │   └── hello              // 具体页面文件夹
+    │   │       └── components     // 页面所用到的组件
+    │   │       └── index.vue      // 页面的入口文件
     │   ├── plugins                // 插件注册
     │   │   ├── modules            // 插件模块
     │   │   │    └── tip           // 具体某一插件文件夹
@@ -103,6 +103,17 @@ export const pRegister = () => {
         verifyCode: ''
     }
 }
+```
+
+`调用请求示例`
+```js
+const params = pLogin()
+params.email = '1532917281@qq.com'
+params.password = '123456'
+this.$api.user.login(params).then(({ userId, token, userInfo }) => {
+    auth.saveToken(token)
+    this.$store.dispatch('saveUserInfo', userInfo)
+})
 ```
 
 `plugins/index.js`
