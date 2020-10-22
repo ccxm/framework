@@ -89,21 +89,21 @@ export const register = params => post('/user/register', params, {
 `api/user/params.js`
 
 ```js
-// 接口请求的参数文件夹，用来增强与约束传参
+// 接口请求的参数文件夹，以Object.seal来约束，不支持扩展属性，用来增强与约束传参
 export const pLogin = () => {
-    return {
+    return Object.seal({
         email: '',
         password: '',
         account: ''
-    }
+    })
 }
 
 export const pRegister = () => {
-    return {
+    return Object.seal({
         email: '',
         password: '',
         verifyCode: ''
-    }
+    })
 }
 ```
 
