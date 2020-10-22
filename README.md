@@ -42,6 +42,8 @@
     │   │   └── validate.js        // 正则表达式检验文件
     │   ├── App.vue                // 入口页面
     │   ├── main.js                // 入口 加载组件 初始化等，此文件不需要再更改！！！
+    ├── .env.development           // dev环境变量
+    ├── .env.production            // prod环境变量
     ├── .babelrc                   // babel-loader 配置
     ├── eslintrc.js                // eslint 配置项
     ├── .gitignore                 // git 忽略项
