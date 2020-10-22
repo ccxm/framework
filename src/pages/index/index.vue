@@ -19,6 +19,7 @@
             const params = pLogin()
             params.email = '1532917281@qq.com'
             params.password = '123456'
+            params.hello = '123'
             this.$api.user.login(params).then(({ userId, token, userInfo }) => {
                 auth.saveToken(token)
                 this.$store.dispatch('saveUserInfo', userInfo)

@@ -1,15 +1,16 @@
 export const pLogin = () => {
-    return {
+    return Object.seal({
         email: '',
         password: '',
         account: ''
-    }
+    })
 }
 
 export const pRegister = () => {
-    return {
+    return Object.seal({
         email: '',
         password: '',
         verifyCode: ''
-    }
+    })
 }
+

@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import axios from 'axios'
 import { BASE_URL, SUCCESS_CODE, EMPTY_PARAM_CODE, INVALID_PARAM_CODE, TIMEOUT } from '@/config'
 import { emptyParam, invalidParam, error as errorTip } from './../tips/tips'

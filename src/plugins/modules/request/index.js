@@ -1,3 +1,4 @@
+/* eslint-disable */
 import httpInstance from './base'
 import { TIP_TYPE } from '@/config/constant'
 import { common as commonTip, error, loading } from './../tips/tips'
